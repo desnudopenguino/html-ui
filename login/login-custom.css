@@ -11,7 +11,7 @@
 			body {
 				background: #F9F9F9;
 				margin: 0;
-				color: #343837;
+color: #343837;
 				font-family: arial;
 				height: 100%;
 			}
@@ -104,17 +104,18 @@
 				100% { transform: translateX(0%);  }
 			}
 
-   .spin {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border: 2px solid rgba(255, 255, 255, .3);
-        border-radius: 50%;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
+			.spin {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border: 2px solid rgba(255, 255, 255, .3);
+				border-radius: 50%;
+				border-top-color: #fff;
+				animation: spin 1s ease-in-out infinite;
+			}
+
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
