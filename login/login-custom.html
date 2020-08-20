@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Login example</title>
+		<link rel="stylesheet" href="login-custom.css" />
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="login">
+				<h1>login</h1>
+				<form id="login-form">
+					<div class="form-item">
+						<p class="warning" id="email-warning">&nbsp; </p>
+						<input type="email" name="email" placeholder="email" id="login-email" required />
+					</div>
+					<div class="form-item">
+						<p class="warning" id="pass-warning">&nbsp; </p>
+						<input type="password" name="password" placeholder="password" id="login-pass" required  />
+					</div>
+					<div class="form-item">
+						<p class="warning" id="login-warning">&nbsp; </p>
+						<button type="submit" id="login-btn" name="login" class="login"><span id="login-text">login</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="login-custom.js"></script>
+	</body>
+</html>

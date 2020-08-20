@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Login example</title>
+		<style>
+			body {
+				background: #F9F9F9;
+				border: 0;
+				padding: 0;
+				margin: 0;
+				color: #343837;
+				font-family: arial;
+			}
+
+			div.flex-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+
+			div.login {
+				background: #EFEFEF;
+				text-align: center;
+				padding: 2rem;
+				border-radius: 5px;
+				border: 1px solid #E0E0E0;
+			}
+			div.form-item {
+				margin: 1.5rem;
+			}
+
+			div.form-item input[type=email], div.form-item input[type=password] {
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid #343837;
+			}
+
+			button.login {
+				background: #0F9B8E;
+				border: 2px solid #0F9B8E;
+				padding: 0.5rem 1rem;
+				color: #F9F9F9;
+				border-radius: 5px;
+				text-transform: uppercase;
+				font-weight: bold;
+				cursor: pointer;
+				width: 100%;
+			}
+
+			button.login:hover {
+				background: #0D8B7F;
+				border: 2px solid #0D8B7F;
+			}
+
+			button.login:active {
+				background: #57B9AF;
+				border: 2px solid #0D8B7F;
+			}
+
+			p.warning {
+				text-align: left;
+				margin: 0 0 0.2rem 0.2rem;
+				font-size: 0.95rem;
+				color: #03719C;
+			}
+
+			input:invalid {
+				border: 1px solid #03719C;
+				box-shadow: 0 0 1px 1px #03719C;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="login">
+				<h1>login</h1>
+				<form id="login-form">
+					<div class="form-item">
+						<input type="email" name="email" placeholder="email" id="login-email" oninvalid="this.setCustomValidity('Please enter a valid email.');" onchange="this.setCustomValidity('');" required />
+					</div>
+					<div class="form-item">
+						<input type="password" name="password" placeholder="password" id="login-pass" oninvalid="this.setCustomValidity('Please enter a password.');" onchange="this.setCustomValidity('');" required  />
+					</div>
+					<div class="form-item">
+						<button type="submit" name="login" class="login">login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div>
+			<span style="display: inline-block; width: 20px; height: 20px; background: #343837;"></span> grassiest charcoal
+			<span style="display: inline-block; width: 20px; height: 20px; background: #03719C;"></span> indiscernible ocean blue
+			<span style="display: inline-block; width: 20px; height: 20px; background: #0F9B8E;"></span> unsusceptible green/blue
+		</div>
+	<script>
+		document.getElementById('login-form').addEventListener('submit', function(e) {
+			alert('form submitted');
+		});
+	</script>
+	</body>
+</html>
