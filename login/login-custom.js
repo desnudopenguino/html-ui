@@ -39,6 +39,7 @@
 							email_input.value = '';
 							pass_input.value = '';
 							email_input.focus();
+							vibrate();
 						}, 300);
 					}, 150);
 				}
@@ -50,6 +51,7 @@
 			error_msg(document.getElementById('email-warning'),"Please enter a valid email.");
 			shift(this);
 			input_focus();
+			vibrate();
 		});
 
 		document.getElementById('login-email').addEventListener('change', function(e) {
@@ -61,6 +63,7 @@
 			error_msg(document.getElementById('pass-warning'),"Please enter a password.");
 			shift(this);
 			input_focus();
+			vibrate();
 		});
 
 		document.getElementById('login-pass').addEventListener('change', function(e) {
@@ -88,4 +91,13 @@
 
 		function input_focus() {
 			document.querySelectorAll("input:invalid")[0].focus();
+		}
+
+		function vibrate() {
+			// enable vibration support
+			navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+			//
+			if (navigator.vibrate) {
+				navigator.vibrate(150);
+			}
 		}
