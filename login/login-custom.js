@@ -30,7 +30,6 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 				setTimeout(function() {
 					shift(email_input);
 					shift(pass_input);
-					shift(login_btn);
 					login_txt.classList.remove('spin');
 					login_txt.innerHTML = 'login';
 					login_txt.style.transition = 'opacity 0.25s';
