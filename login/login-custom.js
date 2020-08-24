@@ -7,6 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 	var email_warning = document.getElementById('email-warning');
 	login_txt.innerHTML = '';
 	login_txt.classList.add('spin');
+	login_btn.disabled = true;
 	// replacement for ajax call to log in
 	setTimeout(function(){
 		if('asdf@asdf' == email_input.value && 'asdf' == pass_input.value) {
@@ -17,7 +18,6 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 				login_txt.innerHTML = '&#x2705;';
 				setTimeout(function() {
 					login_txt.style.transition = 'opacity 0.45s';
-					login_btn.disabled = true;
 					login_txt.style.opacity = 1;
 				}, 100);
 			}, 150);
@@ -38,6 +38,7 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 					email_input.value = '';
 					pass_input.value = '';
 					email_input.focus();
+					login_btn.disabled = false;
 					vibrate();
 				}, 300);
 			}, 150);
