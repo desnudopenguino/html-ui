@@ -4,6 +4,12 @@
  * indiscernible ocean blue #03719C
  * unsusceptible blue/green #0F9B8E
  */
+
+:root {
+	--black: #343837;
+	--blue: #03719C;
+	--green: #0F9B8E;
+}
 html {
 	height: 100%;
 }
@@ -11,7 +17,7 @@ html {
 body {
 	background: #F9F9F9;
 	margin: 0;
-color: #343837;
+	color: var(--black);
 	font-family: arial;
 	height: 100%;
 }
@@ -41,12 +47,12 @@ div.form-item {
 div.form-item input[type=email], div.form-item input[type=password] {
 	padding: 10px;
 	border-radius: 5px;
-	border: 1px solid #343837;
+	border: 1px solid var(--black);
 }
 
 button.login {
-	background: #0F9B8E;
-	border: 2px solid #0F9B8E;
+	background: var(--green);
+	border: 2px solid var(--green);
 	padding: 0.5rem 1rem;
 	color: #F9F9F9;
 	border-radius: 5px;
@@ -79,13 +85,13 @@ p.warning {
 	text-align: left;
 	margin: 0 0 0.2rem 0.2rem;
 	font-size: 0.95rem;
-	color: #03719C;
+	color: var(--blue);
 	opacity: 0;
 }
 
 input:invalid {
-	border: 1px solid #03719C;
-	box-shadow: 0 0 1px 1px #03719C;
+	border: 1px solid var(--blue);
+	box-shadow: 0 0 1px 1px var(--blue);
 }
 
 .shift {
