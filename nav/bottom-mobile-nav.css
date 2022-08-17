@@ -1,0 +1,111 @@
+:root {
+	--light-gray: #F9F9F9;
+	--light-blue: #8ECAE6;
+	--medium-blue: #219EBC;
+	--dark-blue: #023047;
+	--light-orange: #FFB703;
+	--dark-orange: #FB8500;
+	--nav-duration: 0.3s;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background: var(--light-gray);
+	border: 0;
+	padding: 0;
+	margin: 0;
+	color: #343837;
+	font-family: arial;
+}
+nav {
+}
+nav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	z-index: 10;
+}
+nav > ul > li.item {
+	height: 1rem;
+	padding: 1rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	transition: transform 0.15s ease-in-out;
+}
+nav > ul > li.item-1 {
+	background: var(--light-blue);
+	border: 2px solid var(--light-blue);
+	z-index: 60;
+}
+nav > ul > li.item-2 {
+	background: var(--medium-blue);
+	border: 2px solid var(--medium-blue);
+	z-index: 50;
+}
+nav > ul > li.item-3 {
+	background: var(--dark-blue);
+	border: 2px solid var(--dark-blue);
+	color: var(--light-gray);
+	z-index: 40;
+}
+nav > ul > li.item-4 {
+	background: var(--light-orange);
+	border: 2px solid var(--light-orange);
+	z-index: 30;
+}
+nav > ul > li.item-5 {
+	background: var(--dark-orange);
+	border: 2px solid var(--dark-orange);
+	z-index: 20;
+}
+nav > ul.hover > li.item-1 {
+	transition: transform var(--nav-duration) ease-in-out;
+	transform: translate(0, -12rem);
+}
+nav > ul.hover > li.item-2 {
+	transition: transform var(--nav-duration) ease-in-out;
+	transform: translate(0, -9rem);
+}
+nav > ul.hover > li.item-3 {
+	transition: transform var(--nav-duration) ease-in-out;
+	transform: translate(0, -6rem);
+}
+nav > ul.hover > li.item-4 {
+	transition: transform var(--nav-duration) ease-in-out;
+	transform: translate(0, -3rem);
+}
+nav > ul.hover > li.item-5 {
+}
+.active.item-1, .active.item-2, .active.item-4, .active.item-5 {
+	font-weight: bold;
+	border: 2px solid #343837;
+}
+
+.active.item-3 {
+	font-weight: bold;
+	border: 2px solid var(--light-gray);
+}
+#nav-btn {
+	z-index: 200;
+	padding: 0.7rem;
+	display: inline-block;
+	border: 3px solid rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.24rem;
+	margin-left: 1rem;
+	margin-bottom: 0.1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-weight: bold;
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+#nav-btn.hidden {
+	opacity: 0;
+	display: none;
+}
